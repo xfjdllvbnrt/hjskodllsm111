@@ -1,0 +1,5 @@
+vpn-premium.my.id
+premium-server.my.id
+vpn-server.my.id
+vpn-tunnel.online
+server-injection.online
