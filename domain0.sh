@@ -13,9 +13,9 @@ IP=$(wget -qO- icanhazip.com);
 domain=$(cat /etc/v2ray/domain)
 
 apt install jq curl -y
-DOMAIN=vpn-premium.my.id
-sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.vpn-premium.my.id
+DOMAIN=premium-server.my.id
+sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
+SUB_DOMAIN=${sub}.premium-server.my.id
 CF_ID=ruangtambahan1@gmail.com
 CF_KEY=bb2a2607ea3abbfe4ab4ac9195f48fc725a3b
 set -euo pipefail
@@ -65,4 +65,8 @@ echo "Host : $SUB_DOMAIN"
 echo $SUB_DOMAIN > /root/domain
 echo $SUB_DOMAIN > /etc/v2ray/domain
 rm domain0.sh
+systemctl stop v2ray
+systemctl stop v2ray@none
 certv2rayx
+systemctl start v2ray
+systemctl start v2ray@none
