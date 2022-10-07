@@ -1,5 +1,5 @@
 vpn-server.my.id
 premium-server.my.id
 vpn-server.my.id
-vpn-tunnel.online
-server-injection.online
+vpn-server.my.id
+premium-server.my.id
